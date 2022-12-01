@@ -1,0 +1,8 @@
+set default to E:\VPF &&修改默认路径create table 
+员工表(编号 C(10),姓名 C(12),入职日期 D(8),工资 F(10),部门 C(20))&&创建表格
+BROWSE LASTalter table 员工表 rename 工资 to 薪酬 &&替换字段
+alter table 员工表 alter column 薪酬 F(5,2) &&修改字段信息
+copy to 员工表格.txt type sdf &&复制表信息到txt文件中
+type 员工表格.txt &&查看txt文件
+list &&查询所以信息
+list for 薪酬>5000 &&查询大于5000的薪资
